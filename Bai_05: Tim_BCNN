@@ -1,0 +1,30 @@
+#include<stdio.h>
+
+int UCLN(int a,int b)
+{
+    while(a!=b)
+    {
+        if(a>b)
+        {
+            a=a-b;
+        }
+        if(a<b)
+        {
+            b=b-a;
+        }
+    }
+    return a;
+}
+
+int BCNN(int a,int b)
+{
+    int bcnn = (a*b)/UCLN(a,b);
+    return bcnn;
+}
+int main()
+{
+    int a,b,bcnn;
+    printf("Nhap hai so a va b = ");
+    scanf("%d%d",&a,&b);
+    printf("\nBCNN(%d,%d) = %d",a,b,BCNN(a,b));
+}
