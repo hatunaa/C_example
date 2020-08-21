@@ -1,22 +1,31 @@
-#include <stdio.h>
+#include<stdio.h>
+#include<math.h>
+#include<conio.h>
 
-int main()
-{
+int main(){
     int a, b, c;
-    printf("Nhap 3 canh tam giac: ");
-    scanf("%d%d%d",&a,&b,&c);
-    if (a+b<=c||b+c<=a||c+a<=b)
-        printf("(%d,%d,%d) khong phai 3 canh tam giac",a,b,c);
+    printf("Nhap canh a: ");
+    scanf("%d", &a);
+    printf("Nhap canh b: ");
+    scanf("%d", &b);
+    printf("Nhap canh c: ");
+    scanf("%d", &c);
+
+    if((a+b)<c||(a+c)<b||(b+c)<a)
+        printf("Ba canh a,b,c khong tao thanh tam giac ");
     else
     {
-        if (a==b&&b==c)
-            printf("(%d, %d, %d) la tam giac deu",a,b,c);
-        else if (a==b||b==c||c==a)
-            printf("(%d, %d, %d) la tam giac can",a,b,c);
-        else if (a*a+b*b==c*c||b*b+c*c==a*a||c*c+a*a==b*b)
-            printf("(%d, %d, %d) la tam giac vuong",a,b,c);
-        else
-            printf("(%d, %d, %d) la tam giac thuong",a,b,c);
+        printf("Ba canh a,b,c tao thanh tam giac ");
+        if(a==b||b==c||a==c){
+            printf("can");
+        }else if(a==b&&a==c){
+            printf("deu");
+        }else if(a*a+b*b==c*c||a*a+c*c==b*b||b*b+c*c==a*a){
+            printf("vuong");
+        }else{
+            printf("thuong");
+        }
     }
-
+    getch();
+    return 0;
 }
