@@ -1,0 +1,114 @@
+Câu 1: Viết chương trình giải phương trình bậc hai: ax2 + bx + c = 0, với a, b, c là các hệ số thực nhập vào từ bàn phím.
+Câu 2:  Viết chương trình nhập vào tổng thu nhập GDP của nước ta năm 2014 (tính theo USD) và tốc độ tăng trưởng kinh tế bình quân nào đó. In ra màn hình thu nhập GDP của các năm theo dạng:
+	Năm	GDP
+	2014	100
+	2015	112.5
+	. . .	. . .
+cho đến năm có GDP >= 2 lần năm 2014 thì dừng. 
+Câu 3 :  Nhập vào một dãy n số bất kỳ từ bàn phím. Sau đó sắp xếp dãy số theo chiều tăng dần. In ra màn hình dãy số ban đầu và dãy số đã sắp xếp.
+Câu 4:
+Viết chương trình giải hệ 2 phương trình bậc nhất    , với a, b, c, d, e, f, là các hệ số thực nhập vào từ bàn phím. Thông báo kết quả ra màn hình.
+Câu 5:  Tính giá trị n giai thừa (n!), với n nhập vào từ bàn phím. In kết quả ra màn hình.
+Câu 6:  Viết chương trình tìm bội số chung nhỏ nhất của hai số nguyên dương nhập vào từ bàn phím.
+Câu 7:  Viết chương trình nhập vào ba số a, b, c. Sau đó kiểm tra xem ba số này có tạo thành cạnh của tam giác hay không. Nếu là tam giác thì kiểm tra xem đó là loại tam giác nào trong số các loại sau: vuông, cân, vuông cân, đều, tam giác thường.
+Câu 8: Nhập vào một dãy n số bất kỳ từ bàn phím. Tìm giá trị lớn nhất và nhỏ nhất của dãy số đó. In kết quả tìm được ra màn hình cùng vị trí của các giá trị max, min trong dãy số. 
+Câu 9:  Viết chương trình nhập vào ma trận thực Anxm . Sau đó tìm giá trị lớn nhất, giá trị nhỏ nhất của ma trận này. In ma trận cùng kết quả tìm được ra màn hình. Tính tổng các số nguyên tố trong ma trận.
+       Câu 10:  Nhập vào 2 số là tháng và năm, kiểm tra xem tháng đó có bao nhiêu ngày. In kết quả ra màn hình theo dạng: Tháng 3 năm 2014 có 31 ngày.
+Câu 11: Viết chương trình tạo ra một danh sách liên kết thuận để  quản lý danh sách sinh viên. Cấu trúc sinh viên gồm các thành phần: Ho_ten, Tuoi, Diem_TB. Chương trình được tổ chức thành các chương trNhaình con sau: 
+1) Tạo danh sách sinh viên 
+2) Hiển thị danh sách ra màn hình theo dạng 
+	DANH SACH SINH VIEN
+STT	Ho ten	Tuoi	Diem TB
+		. . .	. . .
+3) Chèn thêm một sinh viên vào sau sinh viên nào đó (có tên nhập vào từ bàn phím) 
+4) Xóa một sinh viên
+5) Sửa một sinh viên
+Hàm main() hiển thị menu để chọn các chức năng bằng cách nhập số tương ứng như sau 
+1.	Tao danh sach sinh vien 
+2.	Hien thi danh sach sinh vien 
+3.	Chen them sinh vien 
+4.	Xóa một sinh viên
+5.	Sửa một sinh viên
+6.	Ket thuc
+Chức năng nào được chọn sẽ gọi thực hiện chương trình con tương ứng.
+Câu 12:  Viết chương trình sử dụng kiểu nhập xuất nhị phân với tệp có tên là SO_LIEU.C. Số liệu bán hàng có cấu trúc gồm các thành phần: Ten_hang, Don_gia, So_luong, Thanh_tien (= So_luong * Don_gia). Chương trình được tổ chức thành các chương trình con sau:
+1)	Nhập số liệu bán hàng lên tệp SO_LIEU.C 
+2)	Bổ sung số liệu bán hàng (ít nhất 2 mặt hàng) vào cuối tệp SO_LIEU.C 
+3)	Hiện nội dung tệp lên màn hình theo dạng  
+	SO LIEU BAN HANG
+STT	   Ten Hang	 Don gia	So luong	Thanh tien
+ 1	     Sach	5	100	500
+ 2	     But	2	300	600
+			Tong tien	1100
+Hàm main() hiển thị menu để chọn các chức năng bằng cách nhập số tương ứng như sau (
+1.	Nhap so lieu ban hang len tep
+2.	Ghi bo sung so lieu ban hang vao cuoi tep SO_LIEU.C
+3.	Hien thi noi dung tep SO_LIEU.C
+4.	Ket thuc
+Chức năng nào được chọn sẽ gọi thực hiện chương trình con tương ứng.
+Câu 13:  Viết chương trình đổi một số thập phân n>=0 nhập vào từ bàn phím sang các cơ số 2, 8, 16 bằng cách dùng cấu trúc dữ liệu STACK. Chương trình được tổ chức thành các chương trình con sau:
+1)	Hàm push(): đẩy một phần tử vào ngăn xếp 
+2)	Hàm pop(): loại bỏ 1 phần tử khỏi ngăn xếp 
+3)	Hàm chuyen co so(): đổi một số thập phân n>=0 sang hệ cơ số bất kì
+4)	Hàm hienketqua(): hiển thị kết quả ra màn hình 
+Hàm main() hiển thị menu để chọn các chức năng bằng cách nhập số tương ứng như sau 
+1.	Chuyen mot so nguyen dương sang he 2
+2.	Chuyen mot so nguyen dương sang he 8
+3.	Chuyen mot so nguyen dương sang he 16
+4.	Ket thuc
+Chức năng nào được chọn sẽ gọi chương trình con truyền tham số tương ứng.
+Câu 14:  Viết chương trình nhập vào hai ma trận thực Anxp và Bpxm , sau đó tính ma trận tích Cnxm = Anxp  Bpxm. Chương trình được tổ chức thành các chương trình con sau:
+1)	 Nhập 1 ma trận 
+2)	Tính tích 2 ma trận 
+3)	 Hiển thị 1 ma trận lên màn hình 
+Hàm main() hiển thị menu để chọn các chức năng bằng cách nhập số tương ứng như sau 
+1.	Nhap 2 ma tran
+2.	Tinh tich 2 ma tran
+3.	Hien thi 3 ma tran
+4.	Ket thuc
+Chức năng nào được chọn sẽ gọi thực hiện chương trình con tương ứng.
+Câu 15:  Viết chương trình cộng hai ma trận Cnxm = Anxm + Bnxm . Trong đó dữ liệu về n, m và hai ma trận A, B được lưu trữ trên tệp ‘MA_TRAN.C’ theo dạng sau: Dòng đầu tiên ghi: n  m; dòng tiếp theo ghi: Ma trận A; các dòng tiếp theo là các hàng của ma trận A; dòng tiếp theo ghi: Ma trận B; các dòng tiếp theo là các hàng của ma trận B. Chương trình được tổ chức thành các công việc và các chương trình con sau:
+1)	Tạo tệp MA_TRAN.C theo cấu trúc như trên (giống như soạn thảo một chương trình C) 
+2)	Đọc tệp MA_TRAN.C 
+3)	Tính ma trận tổng C rồi ghi vào cuối tệp trên (sử dụng kiểu nhập xuất văn bản) 
+4)	Mở tệp MA_TRAN.C 
+Hàm main() hiển thị menu để chọn các chức năng bằng cách nhập số tương ứng như sau 
+1.	Doc tep MA_TRAN.C
+2.	Ghi ma tran C bo sung vao cuoi tep tren 
+3.	Ket thuc
+Câu 16:  Viết chương trình nhập vào hai dãy số nguyên theo chiều tăng dần. Sau đó ghép các phần tử của hai dãy này để tạo thành dãy thứ ba vẫn theo chiều tăng dần mà không cần sắp xếp lại. Chương trình được tổ chức thành các chương trình con sau:
+1)	Nhập 1 dãy số theo chiều tăng dần 
+2)	Ghép 2 dãy số ( đã được sắp xếp theo chiều tăng dần) 
+3)	In 1 dãy số 
+Hàm main() hiển thị menu để chọn các chức năng bằng cách nhập số tương ứng như sau 
+1.	Nhap 2 day số nguyen theo chieu tang dan
+2.	Ghep hai day 
+3.	In 3 day so 
+4.	Ket thuc
+Chức năng nào được chọn sẽ gọi thực hiện chương trình con tương ứng.
+Câu 17:  Viết chương trình  nhập vào các hệ số của hai đa thức:  P=anxn + an-1xn-1 + . . . + a1x + a0 ; Q=bmxm + bm-1xm-1 + . . . + b1x + b0 , nhập giá trị x; tính hệ số của đa thức tổng T = P + Q; rồi in ra hệ số của ba đa thức, in ra giá trị của ba đa thức. Chương trình được tổ chức thành các chương trình con sau:
+1)	Nhập hệ số của 1 đa thức  
+2)	In hệ số của 1 đa thức 
+3)	Tính giá trị của 1 đa thức và in ra màn hình 
+4)	Tính hệ số của đa thức tổng (
+Hàm main() hiển thị menu để chọn các chức năng bằng cách nhập số tương ứng như sau 
+1.	Nhap he so cua 2 da thuc P, Q
+2.	Tinh he so cua da thuc T
+3.	In he so cua 3 da thuc P, Q, T 
+4.	In gia tri cua 3 da thuc P, Q, T
+5.	Ket thuc
+Chức năng nào được chọn sẽ gọi thực hiện chương trình con tương ứng.
+Câu 18:  Viết chương trình nhập vào số nguyên dương n. Sau đó in ra màn hình ma trận xoáy Anxn , theo dạng sau:  	1	  2	3
+		  8	  9	4
+		  7	  6	5  với n=3
+Chương trình được tổ chức thành các chương trình con sau:
+1)	Nhập n 
+2)	Tính các phần tử của ma trận xoáy 
+3)	Hiển thị ma trận xoáy lên màn hình 
+Hàm main() hiển thị menu để chọn các chức năng bằng cách nhập số tơng ứng như sau 
+1. Nhap n
+2.	Tinh ma tran xoay
+3.	Hiên thi ma tran xoay
+4.	Ket thuc
+Chức năng nào được chọn sẽ gọi thực hiện chương trình con tương ứng.
+
