@@ -1,0 +1,69 @@
+
+/*
+    Nhập  vào hai ma trận A, B. In ra màn hình ma trận tổng
+*/
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+#define MAX 100
+
+void nhapMaTran(int a[][MAX], int row, int col){
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            printf("Nhap a[%d][%d] = ", i, j);
+            scanf("%d", &a[i][j]);
+        }
+    }
+}
+void xuatMaTran(int a[][MAX], int row, int col){
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            printf("%4d", a[i][j]);
+        }
+        printf("\n\n");
+    }
+}
+void tongHaiMaTran(int a[][MAX], int b[][MAX], int c[][MAX], int row, int col){
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            c[i][j]=a[i][j] + b[i][j];
+        }
+    }
+}
+int main(){
+    int a[MAX][MAX], b[MAX][MAX], c[MAX][MAX], row, col;
+    do{
+        printf("\nNhap vao so dong: ");
+        scanf("%d", &row);
+
+        if(row < 1||row > MAX){
+            printf("\nSo dong khong hop le. Xin kiem tra lai!");
+        }
+    }while(row<1 || row > MAX);
+     do{
+        printf("\nNhap vao so cot: ");
+        scanf("%d", &col);
+
+        if(col < 1|| col > MAX){
+            printf("\nSo cot khong hop le. Xin kiem tra lai!");
+        }
+    }while(col < 1 || col > MAX);
+    printf("\nNhap vao ma tran A: \n");
+    nhapMaTran(a,row,col);
+
+    printf("\nNhap ma tran B: \n");
+    nhapMaTran(b,row,col);
+    printf("\n=================================\n");
+
+    printf("\nMa tran A vua nhap la: \n");
+    xuatMaTran(a,row,col);
+    printf("\nMa tran B vua nhap la: \n");
+    xuatMaTran(b,row,col);
+
+    tongHaiMaTran(a,b,c,row,col);
+    printf("\nMa tran C = A + B\n");
+    xuatMaTran(c,row,col);
+
+    getch();
+    return 0;
+}
