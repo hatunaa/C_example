@@ -21,7 +21,7 @@ void inMaTran(int a[][MAX], int m, int n ){
 }
 void tichMaTran(int a[][MAX], int b[][MAX], int t[][MAX], int donga, int cota, int cotb){
     for(int i=0;i<donga;i++){
-        for(int j=0;j<cota;j++){
+        for(int j=0;j<cotb;j++){
             t[i][j]=0;
             for(int k=0;k < cota;k++){
                 t[i][j] += a[i][j] *b[k][j];
