@@ -22,7 +22,7 @@ void inMaTran(int a[][50], int m, int n)
         printf("\n\n");
     }
 }
-void hoanDoi(int &a, int &b)
+void hoanDoi(int &a, int &b)  //Viết hàm hoán vị
 {
     int tmp = a;
     a = b;
@@ -33,7 +33,7 @@ void hoanDoi2Dong(int A[50][50], int m, int k, int a)
     int i;
     for(i=0;i<m;i++)
     {
-        hoanDoi(A[k][i],A[a][i]);
+        hoanDoi(A[k][i],A[a][i]); //Hoán vị 2 dòng 
     }
 }
 int main()
@@ -43,7 +43,7 @@ int main()
     scanf("%d", &m);
     printf("\nNhap so cot: ");
     scanf("%d", &n);
-    printf("\nNhap ma tran: ");
+    printf("\nNhap ma tran: \n");
     nhapMaTran(A,m,n);
     inMaTran(A,m,n);
     printf("\nNhap 2 dong can hoan doi: ");
