@@ -1,0 +1,89 @@
+/*xuất các phần tử nằm ngoài biên
+ý tưởng bài nài thì rất là đơn giản
+vd : 1  2  3  4
+     5  6  7  9
+	 10 11 12 13
+	 14 15 16 17
+ta sẽ viết tổng cổng là 4 vòng lập for
+- vòng lập for thứ nhất là xuất các phần tử nằm ở dòng đầu tiên
+for (i = 0; i <= n; i++)
+- vòng lập for thứ 2 là xuất các phần tử 9 và 13 ta thấy 9 và số 13
+nằm ở vt A[1][n-1] và A[2][n-1] ta thấy số dòng thay đổi còn số cột thì
+dc dữ nguyên nên ta viết
+for (i = 1; i < n - 1; i++)
+{
+   xuất ra màn hình la: printf("%4d", A[i][n-1]);
+}
+- vòng lập thứ 3: cho nó xuất ra các phần tử ở hàng cuối cùng
+- vòng lập thứ 4 tương tự như vòng lập thứ 2
+xuất các phần tử 5 và 10 ta thấy 5 và số 10
+nằm ở vt A[1][0] và A[2][0] ta thấy số dòng thay đổi còn số cột thì
+dc dữ nguyên là 0 nên ta viết
+for (i = m - 2; i >= 1; i--)
+{
+printf("%4d", A[i][0]);
+}
+*/
+
+#include<conio.h>
+#include<stdio.h>
+int nhapmang(int A[100][100], int m, int n)
+{
+	int i, j;
+	for (i = 0; i < m; i++)
+	{
+		for (j = 0; j < n; j++)
+		{
+			printf("nhap A[%d][%d] : ", i, j);
+			scanf("%3d", &A[i][j]);
+		}
+	}
+	return 0;
+}
+int xuatmang(int A[100][100],int m, int n)
+{
+	int i, j;
+	for (i = 0; i < m; i++)
+	{
+		for (j = 0; j < n; j++)
+		{
+			printf("%3d", A[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+}
+/*hàm giải quyết yêu cầu của bài toán*/
+int xuatcacphantu(int A[100][100],int m, int n)
+{
+	int i, j;
+	for (i = 0; i <= n-1; i++)/*xuất các phần tử nằm ở dòng 1*/
+	{
+		printf("%4d", A[0][i]);
+	}
+	for (i = 1; i <= m-2; i++)/*xuất các phần tử nằm ở cột cuối cùng*/
+	{
+		printf("%4d", A[i][n-1]);
+	}
+	for (i = n-1; i >= 0; i--)/*xuất các phần tử nằm ở cuối hàng*/
+	{
+		printf("%4d", A[m-1][i]);
+	}
+	for (i = m - 2; i >= 1; i--)/*xuất các phần tử nằm ở cột đầu tiên*/
+	{
+		printf("%4d", A[i][0]);
+	}
+	return 0;
+}
+int main()
+{
+	int m,n, A[100][100];
+	printf("Nhap so dong cua ma tran: ");scanf("%d", &m);
+	printf("Nhap so cot cua ma tran: ");scanf("%d", &n);
+	nhapmang(A,m, n);
+	xuatmang(A,m, n);
+	printf("Cac phan tu ngoai bien la : ");
+	xuatcacphantu(A,m, n);
+	getch();
+	return 0;
+}
