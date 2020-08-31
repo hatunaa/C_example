@@ -1,0 +1,87 @@
+/*Đề Bài: nhập vào số dòng, xóa đi dòng đó
+*Ý tưởng: là ta cứ hoán đổi 2 dòng cho đến khi dòng chúng ta cần xóa nằm 
+ở cuối dòng rồi cho số dòng giảm đi 1 ==>thì ta sẽ xóa dc dòng đó
+** bước vào bài làm
+b1: ta viết 1 hàm hoán đổi giũa 2 dòng với nhau với 2 tham chiếu 
+truyền vào
+vd: ma tran : 
+    1  2  3         
+    9  7  6        
+nếu ta truyền 2 tham chiếu vào là 0 vs 1 thì ma trận sẻ trở thành
+  
+   9  7  6
+   1  2  3
+
+b2: ta viết thêm 1 hàm nữa để đưa hàng ta cần xóa về cuối dòng
+- ta sẽ cho vòng lập chạy từ vi trí cần xóa cho dến cuối hàng
+rồi gọi lại hàm hoán dổi 2 dòng o trên với 2 tham số luc nài là
+i và i+1 ( vì chúng ta xóa dòng nên số dòng sẽ thay dổi 
+còn đối với xóa cột thì chỉ cần đổi lại là j, j+1)
+==> cuối cùng ta giảm jh số dòng la xong
+*/
+
+#include<stdio.h>
+#include<conio.h>
+#define MAX 100
+void nhapMaTran(int a[][MAX], int m, int n)
+{
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            printf("a[%d][%d] = ", i, j);
+            scanf("%d", &a[i][j]);
+        }
+    }
+}
+void inMaTran(int a[][MAX], int m, int n)
+{
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            printf("%4d", a[i][j]);
+        }
+        printf("\n\n");
+
+    }
+}
+void hoanDoi(int &a, int &b)
+{
+    int concho = a;
+    a = b;
+    b = concho;
+}
+void hoanDoi2Dong(int A[][MAX], int n, int k, int a)
+{
+    for(int i=0; i<n; i++)
+    {
+        hoanDoi(A[k][i], A[a][i]);
+    }
+}
+void xoaDong(int A[][MAX], int m, int n, int k)
+{
+    for(int i=k;i<n;i++)
+    {
+        hoanDoi2Dong(A,m,i,i+1);
+    }
+    m--;
+    inMaTran(A,m,n);
+}
+int main()
+{
+    int A[MAX][MAX], m,n,k,a;
+    printf("Nhap dong: ");
+    scanf("%d", &m);
+    printf("Nhap cot: ");
+    scanf("%d", &n);
+    nhapMaTran(A,m,n);
+    printf("Ma tran ban dau la: \n");
+    inMaTran(A,m,n);
+    printf("Nhap vao dong can xoa: ");
+    scanf("%d", &k);
+    printf("ma tran sau khi xoa dong %d la: \n", k);
+    xoaDong(A,m,n,k);
+    getch();
+    return 0;
+}
