@@ -1,12 +1,13 @@
 #include<stdio.h>
 #include<conio.h>
+
 void nhapMaTran(int a[][50], int m, int n)
 {
     for(int i=0;i<m;i++)
     {
         for(int j=0;j<n;j++)
         {
-            printf("Nhap A[%d][%d] = ", i, j);
+            printf("Nhap a[%d][%d] = ", i, j);
             scanf("%d", &a[i][j]);
         }
     }
@@ -17,46 +18,40 @@ void inMaTran(int a[][50], int m, int n)
     {
         for(int j=0;j<n;j++)
         {
-            printf("%4d", a[i][j]);
+            printf("%4d",a[i][j]);
         }
         printf("\n\n");
     }
 }
-void hoanDoi(int &a, int &b)  //Viết hàm hoán vị
+void hoanVi(int &a, int &b)
 {
     int tmp = a;
     a = b;
     b = tmp;
 }
-void hoanDoi2Dong(int A[50][50], int m, int k, int a)
+void hoanVi2Dong(int A[50][50], int m, int n, int dong1, int dong2)
 {
-    int i;
-    for(i=0;i<m;i++)
+    for(int i=0;i<n;i++)
     {
-        hoanDoi(A[k][i],A[a][i]); //Hoán vị 2 dòng 
+        hoanVi(A[dong1][i],A[dong2][i]);
     }
 }
 int main()
 {
-    int A[50][50], n, k, a,m;
+    int A[50][50], m,n,dong1, dong2;
     printf("Nhap so dong: ");
     scanf("%d", &m);
-    printf("\nNhap so cot: ");
+    printf("Nhap so cot: ");
     scanf("%d", &n);
-    printf("\nNhap ma tran: \n");
+    printf("Nhap ma tran: \n");
     nhapMaTran(A,m,n);
     inMaTran(A,m,n);
-    printf("\nNhap 2 dong can hoan doi: ");
-    scanf("%d%d", &a,&k);
-    printf("Mang sau khi hoan doi: \n");
-    hoanDoi2Dong(A, n, k, a);
+
+    printf("Nhap 2 dong can hoan doi vi tri: ");
+    scanf("%d %d", &dong1, &dong2);
+    printf("\nMa tran sau khi hoan doi la: \n");
+    hoanVi2Dong(A,m,n,dong1, dong2);
     inMaTran(A,m,n);
     getch();
     return 0;
-
 }
-
-
-
-
-
