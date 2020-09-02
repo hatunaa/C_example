@@ -1,0 +1,12 @@
+/*
+    Các hàm trong string:
+        + Hàm strclen: cung cấp độ dài cho chuỗi
+        + Hàm strcmp: hàm so sánh hai chuỗi
+        + Hàm strcat: hàm nối chuỗi
+        + Hàm strcpy: copy chuỗi
+        + Hàm strlwr: Đưa chuối về dạng chữ thường
+        + Hàm strupr: Đưa chuỗi về dạng chữ in hoa
+        + Hàm strrev: Đảo ngược chuỗi:  Dinh van Tuan -> nauT nav hniD
+        + Hàm strchr: Trả về vị trí đầu tiên của kí tự cần tìm
+
+*/
