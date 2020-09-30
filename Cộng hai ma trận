@@ -1,6 +1,6 @@
 
 /*
-    Nhập  vào hai ma trận A, B. In ra màn hình ma trận tổng
+    Nhập  vào hai ma trận A, B. In ra ma trận tổng
 */
 #include<stdio.h>
 #include<conio.h>
