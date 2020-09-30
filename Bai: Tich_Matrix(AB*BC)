@@ -1,30 +1,31 @@
 #include<stdio.h>
-#include<conio.h>
-#include<math.h>
+#include<stdlib.h>
 #define MAX 100
 
+
 void nhapMaTran(int a[][MAX], int m, int n){
-    for(int i=0;i<m;i++){
-        for(int j=0;j<n;j++){
-            printf("Nhap a[%d][%d] = ", i,j);
+    for(int i=0; i<m; i++){
+        for(int j=0; j<n; j++){
+            printf("a[%d][%d] = ", i, j);
             scanf("%d", &a[i][j]);
         }
     }
 }
-void inMaTran(int a[][MAX], int m, int n ){
-    for(int i=0;i<m;i++){
-        for(int j=0;j<n;j++){
+void inMaTran(int a[][MAX], int m, int n){
+    for(int i=0; i<m; i++){
+        for(int j=0; j<n; j++){
             printf("%4d", a[i][j]);
         }
-        printf("\n\n");
+        printf("\n");
     }
+
 }
-void tichMaTran(int a[][MAX], int b[][MAX], int t[][MAX], int donga, int cota, int cotb){
-    for(int i=0;i<donga;i++){
-        for(int j=0;j<cotb;j++){
+void tichHaiMaTran(int a[][MAX], int b[][MAX], int t[][MAX], int donga, int cotb,  int cotc){
+    for(int i=0; i< donga; i++){
+        for(int j=0; j<cotc; j++){
             t[i][j]=0;
-            for(int k=0;k < cota;k++){
-                t[i][j] += a[i][j] *b[k][j];
+            for(int k=0; k<cotb; k++){
+                t[i][j] += a[i][j]*b[k][j];
             }
         }
     }
@@ -32,30 +33,32 @@ void tichMaTran(int a[][MAX], int b[][MAX], int t[][MAX], int donga, int cota, i
 
 int main(){
     int a[MAX][MAX], b[MAX][MAX], t[MAX][MAX];
-    int donga, cota, cotb;
-    do{
-        printf("Nhap vao so dong ma tran A: ");scanf("%d", &donga);
-    }while((donga<1||donga>MAX)&& printf("\nSo dong khong hop le!"));
-    do{
-        printf("Nhap vao so cot ma tran A: ");scanf("%d", &cota);
-    }while((cota <1||cota >MAX)&& printf("\nSo cot khong hop le!"));
+    int donga, cotb, cotc;
+    printf("Nhap ma tran A\n");
+    printf("Nhap so dong: ");
+    scanf("%d", &donga);
+    printf("Nhap so cot: ");
+    scanf("%d", &cotb);
+    nhapMaTran(a,donga, cotb);
 
-    nhapMaTran(a,donga,cota);
-    printf("\nMa tran A: \n");
-    inMaTran(a, donga, cota);
+    printf("Nhap ma tran B\n");
 
-    do{
-        printf("Nhap vao so cot cua ma tran B: ");scanf("%d",&cotb);
-    }while((cotb < 1||cotb > MAX) && printf("\nSo cot khong hop le!"));
-    nhapMaTran(b, cota, cotb);
-    printf("\nMa tran B: \n");
-    inMaTran(b,cota,cotb);
+    printf("Nhap so cot: ");
+    scanf("%d", &cotc);
 
-    tichMaTran(a, b, t, donga, cota, cotb);
-    printf("Tich cua 2 ma tran la: \n");
-    inMaTran(t,donga, cotb);
+    nhapMaTran(b,cotb, cotc);
+    printf("=================\n");
+    printf("Ma tran A: \n");
+    inMaTran(a, donga, cotb);
+    printf("=================\n");
+    printf("Ma tran B: \n");
+    inMaTran(b,cotb, cotc);
+
+    tichHaiMaTran(a, b, t, donga, cotb, cotc);
+    printf("===================\n");
+    printf("Tich hai ma tran la: \n");
+    inMaTran(t,donga, cotc);
 
     getch();
     return 0;
-
 }
