@@ -1,11 +1,17 @@
-#include <stdio.h>
+#include<stdio.h>
 
-int main()
-{
-    int n, i, gt;
-    printf("Nhap n: ");
-    scanf("%d",&n);
-    for (gt=i=1; i<=n; gt*=i++);
-    printf("%d! = %d",n,gt);
+//Tính giai thừa của số n nhập từ bàn phím
+
+int giaiThua(int a){
+    if(a==1) return 1;
+    return a * giaiThua(a-1); //Đây là bài tập sử dụng đệ quy
+}
+
+int main(){
+    int a;
+    printf("Nhap a: ");
+    scanf("%d", &a);
+
+    printf("%d! = %d", a, giaiThua(a));
     return 0;
 }
