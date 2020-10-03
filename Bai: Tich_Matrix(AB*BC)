@@ -25,7 +25,7 @@ void tichHaiMaTran(int a[][MAX], int b[][MAX], int t[][MAX], int donga, int cotb
         for(int j=0; j<cotc; j++){
             t[i][j]=0;
             for(int k=0; k<cotb; k++){
-                t[i][j] += a[i][j]*b[k][j];
+                t[i][j] += a[i][k]*b[k][j];
             }
         }
     }
