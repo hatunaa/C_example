@@ -31,40 +31,30 @@ int nhapSo()
     }
 }
 
-void nhapMaTran (int m[][MAX], int r, int c)
-{
-    int i,j;
-    for (i=0; i<r; i++)
-        for (j=0; j<c; j++)
-            scanf("%d",&m[i][j]);
-}
-
-void inMaTran (int m[][MAX], int r, int c)
-{
-    int i,j;
-
-    for (i=0; i<r; i++)
-    {
-        printf("\t");
-        for (j=0; j<c; j++)
-            printf("%4d",m[i][j]);
-        printf("\n");
+void nhapMaTran(int a[][MAX], int m, int n){
+    for(int i=0; i<m; i++){
+        for(int j=0; j<n; j++){
+            printf("a[%d][%d] = ", i, j);
+            scanf("%d", &a[i][j]);
+        }
     }
 }
+void inMaTran(int a[][MAX], int m, int n){
+    for(int i=0; i<m; i++){
+        for(int j=0; j<n; j++){
+            printf("%4d", a[i][j]);
+        }
+        printf("\n");
+    }
 
-//Tinh tich 2 ma tran
-void tichMaTran (int m1[][MAX], int m2[][MAX], int m_mul[][MAX], int r1, int n, int c2)
-{
-    int i, j, total, k;
-    for (i=0; i<r1; i++)
-    {
-        for (j=0; j<c2; j++)
-        {
-            total = 0;
-            int k;
-            for (k=0; k<n; k++)
-                total += m1[i][k]*m2[k][j];
-            m_mul[i][j] = total;
+}
+void tichHaiMaTran(int a[][MAX], int b[][MAX], int t[][MAX], int donga, int cotb,  int cotc){
+    for(int i=0; i< donga; i++){
+        for(int j=0; j<cotc; j++){
+            t[i][j]=0;
+            for(int k=0; k<cotb; k++){
+                t[i][j] += a[i][k]*b[k][j];
+            }
         }
     }
 }
